@@ -802,7 +802,7 @@ def initialize_on_open(view: sublime.View):
 
 def unload_old_clients(window: sublime.Window):
     project_path = get_project_path(window)
-    debug('checking for clients on on ', project_path)
+    debug('checking for clients on', project_path)
     clients_by_config = window_clients(window)
     clients_to_unload = {}
     for config_name, client in clients_by_config.items():
@@ -1930,7 +1930,7 @@ class LspCodeActionsCommand(sublime_plugin.TextCommand):
         if is_supported_view(self.view):
             client = client_for_view(self.view)
             if client and client.has_capability('codeActionProvider'):
-            	return True
+                return True
         return False
 
     def run(self, edit, event=None):
